@@ -10,7 +10,8 @@ if __name__ == '__main__':
     list_vals = []
 
     for aux, line in enumerate(sys.stdin):
-        key, val, date = line.split("\t")
+        [key, val, date] = line.split("\t")
+
         date = date.strip()
         val = int(val)
 
