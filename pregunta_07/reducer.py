@@ -33,10 +33,3 @@ if __name__ == '__main__':
     list_vals = sorted(list_vals, key=lambda tup: tup[0])
     for (val_sort, date_sort) in list_vals:
         sys.stdout.write(f"{curkey}   {date_sort}   {val_sort}\n")
-        
-
-
-
-
-
-
