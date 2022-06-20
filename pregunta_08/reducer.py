@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
         if curkey != key:
 
-            sys.stdout.write(f"{curkey}\t{sum(list_vals)}\t{sum(list_vals)/len(list_vals)}\n")
+            sys.stdout.write(f"{curkey}	{sum(list_vals)}	{sum(list_vals)/len(list_vals)}\n")
 
             list_vals = []
             list_vals.append(val)
@@ -28,4 +28,4 @@ if __name__ == '__main__':
         else:
             list_vals.append(val)
 
-    sys.stdout.write(f"{curkey}\t{sum(list_vals)}\t{sum(list_vals)/len(list_vals)}\n")
+    sys.stdout.write(f"{curkey}	{sum(list_vals)}	{sum(list_vals)/len(list_vals)}\n")
