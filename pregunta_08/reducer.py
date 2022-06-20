@@ -11,6 +11,7 @@ if __name__ == '__main__':
 
     for aux, line in enumerate(sys.stdin):
         key, val, date = line.split("\t")
+        key = key.strip()
         date = date.strip()
         val = int(val)
 
@@ -18,7 +19,7 @@ if __name__ == '__main__':
             curkey = copy(key)
 
         if curkey != key:
-
+            # sys.stdout.write("{}\t{}\t{}\n".format(curkey, sum(list_vals), sum(list_vals) / len(list_vals)))
             sys.stdout.write(f"{curkey}	{sum(list_vals)}	{sum(list_vals)/len(list_vals)}\n")
 
             list_vals = []
@@ -28,4 +29,5 @@ if __name__ == '__main__':
         else:
             list_vals.append(val)
 
+    # sys.stdout.write("{}\t{}\t{}\n".format(curkey, sum(list_vals), sum(list_vals) / len(list_vals)))
     sys.stdout.write(f"{curkey}	{sum(list_vals)}	{sum(list_vals)/len(list_vals)}\n")
