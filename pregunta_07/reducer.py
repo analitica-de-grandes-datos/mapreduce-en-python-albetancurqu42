@@ -10,22 +10,18 @@ if __name__ == '__main__':
     list_vals = []
 
     for aux, line in enumerate(sys.stdin):
-        print(line)
-        [key, val, date] = line.split("\t")
-
+        key, val, date = line.split("\t")
         date = date.strip()
         val = int(val)
 
         if curkey is None:
             curkey = copy(key)
 
-
-
         if curkey != key:
             list_vals = sorted(list_vals, key=lambda tup: tup[0])
 
             for (val_sort, date_sort) in list_vals:
-                sys.stdout.write(f"{curkey}\t{date_sort}\t{val_sort}\n")
+                sys.stdout.write(f"{curkey}   {date_sort}   {val_sort}\n")
 
             list_vals = []
             list_vals.append((val, date))
@@ -36,7 +32,7 @@ if __name__ == '__main__':
 
     list_vals = sorted(list_vals, key=lambda tup: tup[0])
     for (val_sort, date_sort) in list_vals:
-        sys.stdout.write(f"{curkey}\t{date_sort}\t{val_sort}\n")
+        sys.stdout.write(f"{curkey}   {date_sort}   {val_sort}\n")
         
 
 
