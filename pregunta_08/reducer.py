@@ -30,4 +30,4 @@ if __name__ == '__main__':
             list_vals.append(val)
 
     # sys.stdout.write("{}\t{}\t{}\n".format(curkey, sum(list_vals), sum(list_vals) / len(list_vals)))
-    sys.stdout.write(f"{curkey}	{sum(list_vals)}	{sum(list_vals)/len(list_vals)}\n")
+    sys.stdout.write(f"{curkey}\t{sum(list_vals)}\t{sum(list_vals)/len(list_vals)}\n")
