@@ -13,7 +13,7 @@ if __name__ == '__main__':
         key, val, date = line.split("\t")
         key = key.strip()
         date = date.strip()
-        val = int(val)
+        val = float(val)
 
         if curkey is None:
             curkey = copy(key)
@@ -29,4 +29,4 @@ if __name__ == '__main__':
         else:
             list_vals.append(val)
 
-    sys.stdout.write(f"{curkey}\t{float(sum(list_vals))}\t{sum(list_vals)/len(list_vals)}\n")
+    sys.stdout.write(f"{curkey}\t{sum(list_vals)}\t{sum(list_vals)/len(list_vals)}\n")
